@@ -1,348 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1000 დღე</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      min-height: 100vh;
-      font-family: Georgia, "Times New Roman", serif;
-      background:
-        radial-gradient(circle at top, #2a0f17 0%, #12070b 38%, #050505 100%);
-      color: #fff;
-      overflow-x: hidden;
-      position: relative;
+      background: #111;
+      color: #eee;
+      font-family: Georgia, serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 40px 20px;
     }
 
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.08),
-        rgba(0,0,0,0.35)
-      );
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .petal {
-      position: fixed;
-      top: -12vh;
-      z-index: 1;
-      opacity: 0.35;
-      pointer-events: none;
-      animation: fall linear infinite;
-      font-size: 18px;
-      filter: blur(0.2px);
-    }
-
-    @keyframes fall {
-      0% {
-        transform: translateY(-15vh) rotate(0deg) translateX(0);
-        opacity: 0;
-      }
-
-      10% {
-        opacity: 0.38;
-      }
-
-      50% {
-        transform: translateY(55vh) rotate(220deg) translateX(20px);
-      }
-
-      100% {
-        transform: translateY(120vh) rotate(500deg) translateX(-20px);
-        opacity: 0;
-      }
-    }
-
-    .page {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 70px 26px 90px;
-      text-align: center;
-    }
-
-    .rose {
-      font-size: 58px;
-      margin-bottom: 22px;
-      animation: float 4s ease-in-out infinite;
-      filter: drop-shadow(0 0 20px rgba(255, 80, 110, 0.22));
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-8px);
-      }
+    .letter {
+      max-width: 700px;
+      margin: auto;
     }
 
     h1 {
-      font-size: 44px;
-      font-weight: 400;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-      opacity: 0;
-      transform: translateY(14px);
-      animation: show 1.6s ease forwards 0.4s;
+      text-align: center;
+      font-weight: normal;
+      margin-bottom: 40px;
     }
 
-    .line {
-      width: 70px;
-      height: 1px;
-      background: rgba(255,255,255,0.45);
-      margin: 0 auto 34px;
-      opacity: 0;
-      animation: show 1.4s ease forwards 1s;
-    }
-
-    .intro {
+    p {
       font-size: 19px;
-      line-height: 1.9;
-      color: rgba(255,255,255,0.92);
-      margin-bottom: 28px;
-      opacity: 0;
-      transform: translateY(12px);
-      animation: show 1.5s ease forwards 1.4s;
-    }
-
-    .message {
-      font-size: 18px;
-      line-height: 1.95;
-      color: rgba(255,255,255,0.86);
-      opacity: 0;
-      transform: translateY(12px);
-      animation: show 1.8s ease forwards 2.1s;
-    }
-
-    .message p {
-      margin-bottom: 24px;
-    }
-
-    .highlight {
-      font-size: 21px;
-      color: #fff;
-      font-weight: 600;
-      letter-spacing: 0.2px;
+      margin-bottom: 22px;
     }
 
     .ending {
-      margin-top: 36px;
-      font-size: 21px;
-      line-height: 1.7;
-      opacity: 0;
-      transform: translateY(12px);
-      animation: show 1.8s ease forwards 3s;
-    }
-
-    .final {
-      margin-top: 22px;
-      font-size: 31px;
-      font-weight: 400;
-      opacity: 0;
-      animation: show 1.6s ease forwards 3.8s;
-    }
-
-    .heart {
-      margin-top: 18px;
-      font-size: 26px;
-      opacity: 0;
-      animation:
-        show 1.3s ease forwards 4.3s,
-        pulse 2.2s ease-in-out infinite 5s;
-    }
-
-    @keyframes show {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.1);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .page {
-        padding: 54px 22px 70px;
-      }
-
-      h1 {
-        font-size: 37px;
-      }
-
-      .intro {
-        font-size: 18px;
-      }
-
-      .message {
-        font-size: 17px;
-        line-height: 1.85;
-      }
-
-      .highlight {
-        font-size: 20px;
-      }
-
-      .final {
-        font-size: 28px;
-      }
+      text-align: center;
+      font-size: 24px;
+      margin-top: 45px;
     }
   </style>
 </head>
 
 <body>
+  <div class="letter">
 
-  <div class="overlay"></div>
+    <h1>1000 დღე</h1>
 
-  <div class="petal" style="left:6%; animation-duration:13s; animation-delay:0s;">🌹</div>
-  <div class="petal" style="left:15%; animation-duration:16s; animation-delay:2s;">🌹</div>
-  <div class="petal" style="left:28%; animation-duration:14s; animation-delay:5s;">🌹</div>
-  <div class="petal" style="left:41%; animation-duration:17s; animation-delay:1s;">🌹</div>
-  <div class="petal" style="left:54%; animation-duration:15s; animation-delay:4s;">🌹</div>
-  <div class="petal" style="left:67%; animation-duration:18s; animation-delay:3s;">🌹</div>
-  <div class="petal" style="left:79%; animation-duration:14s; animation-delay:6s;">🌹</div>
-  <div class="petal" style="left:91%; animation-duration:16s; animation-delay:2.5s;">🌹</div>
+    <p>
+      დღეს 1000 დღე გავიდა იმ დღიდან, როცა მითხარი, რომ გიყვარვარ.
+    </p>
 
-  <main class="page">
+    <p>
+      შეიძლება ეს უბრალოდ რიცხვია, მაგრამ ჩემთვის ეს 1000 დღე მხოლოდ დრო არ ყოფილა.
+      ეს იყო 1000 დღე მოგონებების, სიცილის, ჩხუბების, შერიგებების, სიხარულის,
+      ტკივილის და იმ სიყვარულის, რომელიც ოდესღაც ერთმანეთისთვის გვქონდა.
+    </p>
 
-    <div class="rose">🌹</div>
+    <p>
+      ზუსტად მახსოვს ის დღე და ის სიტყვები.<br>
+      „მიყვარხარ.“
+    </p>
 
-    <h1>Happy Birthday</h1>
+    <p>
+      ალბათ ვერასდროს წარმოვიდგენდი, რომ ამ ორ სიტყვას ჩემთვის ამდენი მნიშვნელობა ექნებოდა.
+    </p>
 
-    <div class="line"></div>
+    <p>
+      დღეს არაფერს გთხოვ.<br>
+      არც პასუხს, არც გადაწყვეტილებას და არც იმას, რომ რამე შეცვალო.
+    </p>
 
-    <div class="intro">
-      I could have simply sent flowers.<br>
-      But somehow, flowers alone didn’t feel like enough.
-    </div>
+    <p>
+      უბრალოდ მინდოდა, რომ ამ 1000 დღეს თავისი პატარა ადგილი ჰქონოდა.
+    </p>
 
-    <div class="message">
+    <p>
+      მინდა იცოდე, რომ რაც შენ მიმართ ვიგრძენი, ჩემთვის არასდროს ყოფილა თამაში
+      ან დროებითი გრძნობა.
+      შეიძლება ბევრი რამ არასწორად გავაკეთე.
+      შეიძლება ერთმანეთიც ძალიან ვატკინეთ.
+      ამას ვერ შევცვლი.
+    </p>
 
-      <p>
-        There are people we meet in life who become special to us
-        in ways that are difficult to explain.
-      </p>
+    <p>
+      მაგრამ ერთ რამეს ვერ დავმალავ —<br>
+      მე ნამდვილად მიყვარდი.
+    </p>
 
-      <p>
-        People whose happiness matters to us,
-        even when we expect absolutely nothing from them.
-      </p>
+    <p>
+      და ალბათ ყოველთვის მემახსოვრება ის დღე,
+      როცა პირველად მითხარი, რომ გიყვარვარ.
+    </p>
 
-      <p class="highlight">
-        You are one of those people.
-      </p>
+    <p>
+      1000 დღე გავიდა.
+    </p>
 
-      <p>
-        Maybe you’ll wonder who sent these roses.
-        Maybe you’ll have a few guesses.
-        And maybe you’ll never know for sure.
-      </p>
+    <p>
+      მადლობა იმ ყველა დღისთვის, რომელიც ოდესღაც „ჩვენ“ იყო.
+    </p>
 
-      <p>
-        That’s okay.
-      </p>
+    <p>
+      არ ვიცი, რას მოგვიტანს მომავალი.
+      ამ წერილით მხოლოდ იმას ვამბობ, რაც მაშინ ვერ შევძელი სათანადოდ მეთქვა:
+    </p>
 
-      <p>
-        Because knowing who sent them isn’t the important part.
-      </p>
+    <p class="ending">
+      <strong>მიყვარდი. მართლა.</strong>
+    </p>
 
-      <p>
-        What matters is that today, somewhere,
-        someone remembered your birthday
-        and genuinely wanted to make you smile.
-      </p>
-
-      <p>
-        Someone wanted you to wake up and feel special.
-        Someone wanted your day to be a little more beautiful.
-      </p>
-
-      <p class="highlight">
-        Someone chose 100 roses because one somehow didn’t feel like enough.
-      </p>
-
-      <p>
-        Not because anything is expected in return.
-      </p>
-
-      <p>
-        Not a message.<br>
-        Not a thank you.<br>
-        Not even an answer to the question of who.
-      </p>
-
-      <p class="highlight">
-        Your smile is enough.
-      </p>
-
-      <p>
-        So keep the mystery.
-      </p>
-
-      <p>
-        And whenever you look at these roses,
-        don’t think about the person who sent them.
-      </p>
-
-      <p>
-        Think about yourself.
-      </p>
-
-      <p>
-        Think about how much life you still have ahead of you.
-        How many beautiful places you haven’t seen yet.
-        How many nights you haven’t laughed through yet.
-        How many wonderful memories you haven’t made yet.
-      </p>
-
-      <p>
-        And whatever this next year brings you,
-        I hope it brings you closer to the life
-        that makes you truly happy.
-      </p>
-
-    </div>
-
-    <div class="ending">
-      <strong>You deserve to feel special today.</strong>
-      <br><br>
-      That is all these roses were ever meant to say.
-    </div>
-
-    <div class="final">
-      Happy Birthday.
-    </div>
-
-    <div class="heart">♡</div>
-
-  </main>
-
+  </div>
 </body>
 </html>
